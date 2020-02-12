@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("build and deploy on Windows and Linux") {
             parallel {
-                stage("windows 1") {
+                stage("windows") {
                     agent {
 //                        label "windows"
                         label "vats"
@@ -28,15 +28,14 @@ pipeline {
                     }
                 }
 
-                stage("linux 2") {
+                stage("linux") {
                     agent {
 //                        label "linux"
-                        label "vats"
+                        label "vats"                        
                     }
                     stages {
                         stage("build") {
                             steps {
-//                                sh "./run-build.sh"
                                 echo "./run-build.sh"
                             }
                         }
@@ -45,7 +44,6 @@ pipeline {
                                  branch "master"
                              }
                              steps {
-//                                sh "./run-deploy.sh"
                                 echo "./run-deploy.sh"
                             }
                         }
