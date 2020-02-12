@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'pip install -r requirements.txt'
+//        sh 'pip install -r requirements.txt'
+        echo "Build"
       }
     }
 
@@ -20,7 +21,8 @@ pipeline {
 
       }
       steps {
-        sh 'python test.py'
+//        sh 'python test.py'
+        echo "TEST"
       }
     }
 
