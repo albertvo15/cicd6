@@ -6,7 +6,8 @@ pipeline {
             parallel {
                 stage("windows parallel") {
                     agent {
-                        label "windows"
+//                        label "windows"
+                        label "vats"
                     }
                     stages {
                         stage("build") {
