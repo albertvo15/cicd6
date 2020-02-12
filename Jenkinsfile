@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("build and deploy on Windows and Linux") {
             parallel {
-                stage("windows") {
+                stage("windows parallel") {
                     agent {
                         label "windows"
                     }
