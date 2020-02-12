@@ -29,7 +29,8 @@ pipeline {
 
                 stage("linux") {
                     agent {
-                        label "linux"
+//                        label "linux"
+                        label "master"
                     }
                     stages {
                         stage("build") {
