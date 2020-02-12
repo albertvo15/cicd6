@@ -30,7 +30,7 @@ pipeline {
                 stage("linux") {
                     agent {
 //                        label "linux"
-                        label "master"
+                        label "vats"
                     }
                     stages {
                         stage("build") {
