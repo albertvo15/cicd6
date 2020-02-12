@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("build and deploy on Windows and Linux") {
             parallel {
-                stage("windows parallel") {
+                stage("windows 1") {
                     agent {
 //                        label "windows"
                         label "vats"
@@ -28,7 +28,7 @@ pipeline {
                     }
                 }
 
-                stage("linux") {
+                stage("linux 2") {
                     agent {
 //                        label "linux"
                         label "vats"
