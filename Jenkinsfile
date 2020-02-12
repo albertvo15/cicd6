@@ -12,7 +12,8 @@
                     stages {
                         stage("build") {
                             steps {
-                                bat "run-build.bat"
+//                                bat "run-build.bat"
+                                echo "run-build.bat"
                             }
                         }
                         stage("deploy") {
@@ -20,7 +21,8 @@
                                 branch "master"
                             }
                             steps {
-                                bat "run-deploy.bat"
+//                                bat "run-deploy.bat"
+                                echo "run-deploy.bat"
                             }
                         }
                     }
@@ -33,7 +35,8 @@
                     stages {
                         stage("build") {
                             steps {
-                                sh "./run-build.sh"
+//                                sh "./run-build.sh"
+                                echo "./run-build.sh"
                             }
                         }
                         stage("deploy") {
@@ -41,7 +44,8 @@
                                  branch "master"
                              }
                              steps {
-                                sh "./run-deploy.sh"
+//                                sh "./run-deploy.sh"
+                                echo "./run-deploy.sh"
                             }
                         }
                     }
